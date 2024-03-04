@@ -3,7 +3,7 @@
 NOTE
 
 1. Gunakan bahasa **C++**
-2. Kumpulkan semua source code pada assignment Google Classroom **(jangan di-ZIP)**, diberi format: **NamaKelas_PSDA01_NIM_NamaLengkap_Nomor Soal.cpp**, 
+2. Kumpulkan semua source code pada assignment Google Classroom **(jangan di-ZIP)**, diberi format: **NIM_Nama_PSDA01_NomorSoal.cpp**, 
 
    misal apabila mengumpulkan nomor 1 : **L0122081_JassonFranklynWang_PSDA01_1.cpp**
 
