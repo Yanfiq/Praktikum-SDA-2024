@@ -37,35 +37,33 @@ Anda boleh menggunakan array list (std::vector) ataupun linked list (std::list)
 
 ## No. 2 - Stack
 
-Selesaikan permasalahan di bawah menggunakan stack **(bobot: 30%)**:
+Simulasikan fitur browsing history menggunakan stack **(bobot: 30%)**:
 
-Ronald memiliki tumpukan buku sebagai berikut (urut dari posisi teratas):
+Ikutilah langkah-langkah berikut:
+1. Buatlah stack untuk menyimpan history.
+2. Buatlah 2 fungsi, visit(std::string) untuk mengunjungi sebuah website dan back() untuk kembali ke halaman sebelumnya.
 
-- Implementation of Linear Algebra
-- Data Structure and Algorithm 2nd Edition
-- Linear Algebra and Its Applications
-- Introduction to OpenCV Library (Python)
-- Introduction to Machine Learning
-- Data Structure and Algorithm 1st Edition
-- Machine Learning
-- Database Management System (Expert Edition)
-- Database Management System (Beginner Edition)
+Contoh penggunaan fungsi:
+```
+- visit("google.com")
+- visit("instagram.com")
+- visit("github.com")
+- back()
+- back()
+- visit("stackoverflow.com")
+```
 
+Contoh output (urut):
+```
+- Mengunjungi google.com
+- Mengunjungi instagram.com
+- Mengunjungi github.com
+- Mengunjungi instagram.com
+- Mengunjungi google.com
+- Mengunjungi stackoverflow.com
+```
 
-Suatu saat Ronald ingin mengurutkan tumpukan buku tersebut agar terurut dan menjual buku berjudul **Introduction to OpenCV Library (Python)** sehingga tumpukan buku tersebut menjadi seperti berikut:
-
-- Linear Algebra and Its Applications
-- Implementation of Linear Algebra
-- Introduction to Machine Learning
-- Machine Learning
-- Data Structure and Algorithm 1st Edition
-- Data Structure and Algorithm 2nd Edition
-- Database Management System (Beginner Edition)
-- Database Management System (Expert Edition)
-
-Buatlah program yang mensimulasikan permasalahan tersebut menggunakan stack! Program tidak harus menampilkan isi stack ke layar ataupun menerima input. Asisten akan menilai ketepatan dari source code yang dibuat.
-
-**DILARANG KERAS MEMBUAT ULANG STACK**
+Nilai tambahan jika menambahkan fungsi forward() untuk mengunjungi halaman yang dikunjungi setelah halaman x. Anda boleh menggunakan stack lebih dari 1.
 
 ## No. 3 - Queue
 
