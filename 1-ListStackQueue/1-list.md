@@ -88,14 +88,14 @@ Menghapus elemen di awal (kompleksitas O(N)):
 ```c++
 fav_numbers.erase(fav_numbers.begin());
 // atau:
-fav_numbers.pop_front();
+fav_numbers.pop_front(); //(kompleksitas O(1))
 ```
 
 Menghapus elemen di akhir (kompleksitas O(N)):
 ```c++
 fav_numbers.erase(fav_numbers.end());
 // atau:
-fav_numbers.pop_back();
+fav_numbers.pop_back(); // (kompleksitas O(1))
 ```
 
 Mengakses elemen di posisi ke-3:
