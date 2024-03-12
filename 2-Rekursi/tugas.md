@@ -3,7 +3,7 @@
 NOTE
 
 1. Gunakan bahasa **C++**
-2. Kumpulkan semua source code pada assignment Google Classroom **(jangan di-ZIP)**, diberi format: **NIM_Nama_PSDA02.cpp**, contoh : **L0122081_JassonFranklynWang_PSDA02.cpp**
+2. Kumpulkan source code pada assignment Google Classroom, diberi format: **NIM_Nama_PSDA02.cpp**, contoh : **L0122081_JassonFranklynWang_PSDA02.cpp**
 
 ### Soal: Deret Fibonacci
 
