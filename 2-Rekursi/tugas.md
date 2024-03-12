@@ -9,7 +9,7 @@ NOTE
 
 Tuliskan sebuah fungsi untuk menghitung angka Fibonacci ke-n menggunakan rekursi.
 
-Deret Fibonacci adalah deret angka di mana setiap angka adalah jumlah dari dua angka sebelumnya, dimulai dari 0 dan 1. Dalam istilah matematika, deret ini didefinisikan oleh Relasi perulangan:
+Deret Fibonacci adalah deret angka di mana setiap angka adalah jumlah dari dua angka sebelumnya, dimulai dari 0 dan 1. Dalam istilah matematika, deret ini didefinisikan oleh relasi perulangan:
 ```
 F(n) = F(n-1) + F(n-2)
 ```
