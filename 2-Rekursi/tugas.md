@@ -20,8 +20,10 @@ F(0) = 0, F(1) = 1
 Tugas Anda adalah mengimplementasikan fungsi rekursif ```int fibonacci(int n)``` yang mengembalikan angka Fibonacci ke-n berdasarkan relasi perulangan.
 
 Contoh:
+```
 input: 5
 output: 5
 
 input: 10
 output: 55
+```
