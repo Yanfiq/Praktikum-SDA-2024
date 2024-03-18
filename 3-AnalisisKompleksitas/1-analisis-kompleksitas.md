@@ -72,10 +72,9 @@ Kompleksitas Waktu dari sebuah loop dianggap sebagai O(log n) jika variabel-vari
 
 ```cpp
 // ...
-int i, j, k = 0;
+int i, j;
 for (i = 0; i <= N; i++) {
 	for (j = 0; j <= N; j = j * 2) {
-		// k = k + N / 2;
 		cout << "Hey - I'm busy looking at: " + i + " and " + j << endl;
 	}
 }
