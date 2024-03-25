@@ -25,7 +25,7 @@ Gunakan struktur data set dan map untuk menyimpan informasi pengguna dengan efis
 
 Contoh: 
 
-```c++
+```
 Input:
 signUp("user1", "password123")
 signUp("user2", "hello456")
