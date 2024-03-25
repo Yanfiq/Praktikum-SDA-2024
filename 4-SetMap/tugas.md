@@ -3,7 +3,7 @@
 Note:
 
 - Kerjakan dengan bahasa C++
-- Kumpulkan semua source code dengan format **PSDA04_NIM_Nama Lengkap.cpp** dalam assignment Google Classroom
+- Kumpulkan semua source code dengan format **NIM_Nama Lengkap_PSDA04.cpp** dalam assignment Google Classroom
 
 ## Soal: Program Sign-up dan Login
 
