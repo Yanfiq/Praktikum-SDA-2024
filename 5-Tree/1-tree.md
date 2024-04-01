@@ -93,8 +93,6 @@ bool deleteNodeIndex(unsigned int index) {
 
 Cara penggunaan metode di atas adalah dengan memanggilnya pada `parent` dari `node` yang ingin kita hapus, dan memberikan urutan `node` tersebut mulai dari 0, dihitung dari `node` yang paling kiri. Misalnya, pada contoh gambar Tree di atas, jika kita ingin menghapus `node` `4`, maka kita memanggil metode ini seperti `node_9.deleteNodeIndex(0)` karena merupakan satu-satunya `child` maka memiliki indeks 0.
 
-Tatacara deletion pada implementasi kita di atas merupakan recursive deletion, di mana jika kalian menghapus sebuah `node` yang memiliki banyak `child`, maka semua `child` itu akan ikut terhapus.
-
 ### Traversal
 
 Traversal dalam struktur data Tree dapat didefinisikan dengan "mengunjungi tiap-tiap `node` tepat satu kali". Ada beberapa jenis Tree traversal yang ada, seperti `postorder`, `preorder`, dan `inorder`. Kita tidak akan menggunakan `inorder` pada praktikum ini karena jenis traversal itu hanya digunakan untuk binary tree. Tree traversal `postorder` dan `preorder` memiliki pseudocode seperti di bawah ini.
@@ -112,8 +110,6 @@ Postorder
   3. Proses node tersebut
 ```
 
-> Untuk penggunaan Tree traversal secara interaktif, silakan melihat video praktikum
-Kita dapat membuat metode traversal kita seperti potongan di bawah ini. Perhatikan bagaimana kita menggunakan `depth` untuk memberikan _style_ ke kode kita supaya lebih mudah dipahami hubungannya dengan `node` lainnya (apakah ancestor, sibling, atau descendant).
 
 ```cpp
 // ...
