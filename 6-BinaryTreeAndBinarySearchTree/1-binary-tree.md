@@ -16,67 +16,6 @@ Sebuah node Binary Tree berisi bagian-bagian berikut.
 3. Pointer ke anak kanan
 
 ```cpp
-struct Node {
-	int data;
-	Node* left;
-	Node* right;
-
-	// Val is the key or the value that
-	// has to be added to the data part
-	Node(int val)
-	{
-		data = val;
-
-		// Left and right child for node
-		// will be initialized to null
-		left = NULL;
-		right = NULL;
-	}
-};
-
-int main()
-{
-
-	/*create root*/
-	Node* root = new Node(1);
-	/* following is the tree after above statement
-
-		    1
-		   / \
-		NULL NULL
-	*/
-
-	root->left = new Node(2);
-	root->right = new Node(3);
-	/* 2 and 3 become left and right children of 1
-				 1
-			        / \
-			     2	     3
-			    / \	     / \
-			NULL NULL NULL NULL
-	*/
-
-	root->left->left = new Node(4);
-	/* 4 becomes left child of 2
-		     1
-		    / \
-		  2	3
-		/ \    / \
-	      4 NULL NULL NULL
-		/ \
-	     NULL NULL
-	*/
-
-	return 0;
-}
-```
-
-### Insertion
-Idenya adalah untuk melakukan traversal urutan level iteratif dari pohon yang diberikan menggunakan queue. Jika kita menemukan sebuah node yang anak kirinya kosong, kita membuat kunci baru sebagai anak kiri dari node tersebut. Lain jika kita menemukan node yang anak kanannya kosong, kita membuat kunci baru sebagai anak kanan. terus sampai kita menemukan simpul yang anak kiri atau kanannya kosong.  
-
-![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/binary-tree-insertion.png)
-
-```cpp
 // C++ program to insert element in Binary Tree
 #include <iostream>
 #include <queue>
@@ -104,6 +43,49 @@ Node* CreateNode(int data)
 	return newNode;
 }
 
+int main()
+{
+
+	/*create root*/
+	Node* root = CreateNode(1);
+	/* following is the tree after above statement
+
+		    1
+		   / \
+		NULL NULL
+	*/
+
+	root->left = CreateNode(2);
+	root->right = CreateNode(3);
+	/* 2 and 3 become left and right children of 1
+				 1
+			        / \
+			     2	     3
+			    / \	     / \
+			NULL NULL NULL NULL
+	*/
+
+	root->left->left = CreateNode(4);
+	/* 4 becomes left child of 2
+		     1
+		    / \
+		  2	3
+		/ \    / \
+	      4 NULL NULL NULL
+		/ \
+	     NULL NULL
+	*/
+
+	return 0;
+}
+```
+
+### Insertion
+Idenya adalah untuk melakukan traversal urutan level iteratif dari pohon yang diberikan menggunakan queue. Jika kita menemukan sebuah node yang anak kirinya kosong, kita membuat kunci baru sebagai anak kiri dari node tersebut. Lain jika kita menemukan node yang anak kanannya kosong, kita membuat kunci baru sebagai anak kanan. terus sampai kita menemukan simpul yang anak kiri atau kanannya kosong.  
+
+![Gambar Binary Tree](https://media.geeksforgeeks.org/wp-content/uploads/binary-tree-insertion.png)
+
+```cpp
 /* Function to insert element in binary tree */
 
 Node* InsertNode(Node* root, int data)
@@ -175,7 +157,6 @@ int main()
 
 	return 0;
 }
-
 ```
 
 Output:
@@ -195,43 +176,11 @@ Algoritma
 
 
 ```cpp
-// C++ program to delete element in binary tree
-#include <bits/stdc++.h>
-using namespace std;
-
-/* A binary tree node has key, pointer to left
-child and a pointer to right child */
-struct Node {
-	int key;
-	struct Node *left, *right;
-};
-
-/* function to create a new node of tree and
-return pointer */
-struct Node* newNode(int key)
-{
-	struct Node* temp = new Node;
-	temp->key = key;
-	temp->left = temp->right = NULL;
-	return temp;
-};
-
-/* Inorder traversal of a binary tree*/
-void inorder(struct Node* temp)
-{
-	if (!temp)
-		return;
-	inorder(temp->left);
-	cout << temp->key << " ";
-	inorder(temp->right);
-}
-
 /* function to delete the given deepest node
 (d_node) in binary tree */
-void deletDeepest(struct Node* root,
-				struct Node* d_node)
+void deleteDeepest(struct Node* root, struct Node* d_node)
 {
-	queue<struct Node*> q;
+	std::queue<struct Node*> q;
 	q.push(root);
 
 	// Do level order traversal until last node
@@ -267,19 +216,19 @@ void deletDeepest(struct Node* root,
 }
 
 /* function to delete element in binary tree */
-Node* deletion(struct Node* root, int key)
+Node* deletion(struct Node* root, int data)
 {
 	if (root == NULL)
 		return NULL;
 
 	if (root->left == NULL && root->right == NULL) {
-		if (root->key == key)
+		if (root->data == data)
 			return NULL;
 		else
 			return root;
 	}
 
-	queue<struct Node*> q;
+	std::queue<struct Node*> q;
 	q.push(root);
 
 	struct Node* temp;
@@ -291,7 +240,7 @@ Node* deletion(struct Node* root, int key)
 		temp = q.front();
 		q.pop();
 
-		if (temp->key == key)
+		if (temp->data == data)
 			key_node = temp;
 
 		if (temp->left)
@@ -302,9 +251,9 @@ Node* deletion(struct Node* root, int key)
 	}
 
 	if (key_node != NULL) {
-		int x = temp->key;
-		deletDeepest(root, temp);
-		key_node->key = x;
+		int x = temp->data;
+		deleteDeepest(root, temp);
+		key_node->data = x;
 	}
 	return root;
 }
@@ -312,22 +261,21 @@ Node* deletion(struct Node* root, int key)
 // Driver code
 int main()
 {
-	struct Node* root = newNode(10);
-	root->left = newNode(11);
-	root->left->left = newNode(7);
-	root->left->right = newNode(12);
-	root->right = newNode(9);
-	root->right->left = newNode(15);
-	root->right->right = newNode(8);
+	struct Node* root = CreateNode(13);
+    InsertNode(root, 12);
+    InsertNode(root, 10);
+    InsertNode(root, 4);
+    InsertNode(root, 19);
+    InsertNode(root, 16);
+    InsertNode(root, 9);
 
-	cout << "Inorder traversal before deletion : ";
+	std::cout << "Inorder traversal before deletion : ";
 	inorder(root);
 
-	int key = 11;
-	root = deletion(root, key);
+	root = deletion(root, 12);
 
-	cout << endl;
-	cout << "Inorder traversal after deletion : ";
+	std::cout << std::endl;
+	std::cout << "Inorder traversal after deletion : ";
 	inorder(root);
 
 	return 0;
@@ -337,6 +285,6 @@ int main()
 
 Output:
 ```
-Inorder traversal before deletion : 7 11 12 10 15 9 8 
-Inorder traversal after deletion : 7 8 12 10 15 9 
+Inorder traversal before deletion : 4 12 19 13 16 10 9
+Inorder traversal after deletion : 4 9 19 13 16 10
 ```
