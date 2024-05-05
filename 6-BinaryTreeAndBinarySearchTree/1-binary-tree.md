@@ -262,12 +262,12 @@ Node* deletion(struct Node* root, int data)
 int main()
 {
 	struct Node* root = CreateNode(13);
-    InsertNode(root, 12);
-    InsertNode(root, 10);
-    InsertNode(root, 4);
-    InsertNode(root, 19);
-    InsertNode(root, 16);
-    InsertNode(root, 9);
+	InsertNode(root, 12);
+    	InsertNode(root, 10);
+    	InsertNode(root, 4);
+    	InsertNode(root, 19);
+    	InsertNode(root, 16);
+    	InsertNode(root, 9);
 
 	std::cout << "Inorder traversal before deletion : ";
 	inorder(root);
