@@ -3,7 +3,7 @@
 Note:
 
 - Kerjakan dengan bahasa C++
-- Kumpulkan semua source code dengan format **NIM_Nama Lengkap_PSDA07.cpp** dalam assignment Google Classroom
+- Kumpulkan source code dengan format **NIM_Nama Lengkap_PSDA07.cpp** dalam assignment Google Classroom
 
 ## Soal: Program Pertemanan
 
