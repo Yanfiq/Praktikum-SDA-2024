@@ -1,4 +1,4 @@
-# Tugas Praktikum Set dan Map
+# Tugas Praktikum Graph dan Disjoint Set
 
 Note:
 
