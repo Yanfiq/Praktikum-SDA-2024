@@ -176,15 +176,12 @@ void merge(int array[], int const left, int const mid,
 	// Merge the temp arrays back into array[left..right]
 	while (indexOfSubArrayOne < subArrayOne
 		&& indexOfSubArrayTwo < subArrayTwo) {
-		if (leftArray[indexOfSubArrayOne]
-			<= rightArray[indexOfSubArrayTwo]) {
-			array[indexOfMergedArray]
-				= leftArray[indexOfSubArrayOne];
+		if (leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) {
+			array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
 			indexOfSubArrayOne++;
 		}
 		else {
-			array[indexOfMergedArray]
-				= rightArray[indexOfSubArrayTwo];
+			array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
 			indexOfSubArrayTwo++;
 		}
 		indexOfMergedArray++;
@@ -193,8 +190,7 @@ void merge(int array[], int const left, int const mid,
 	// Copy the remaining elements of
 	// left[], if there are any
 	while (indexOfSubArrayOne < subArrayOne) {
-		array[indexOfMergedArray]
-			= leftArray[indexOfSubArrayOne];
+		array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
 		indexOfSubArrayOne++;
 		indexOfMergedArray++;
 	}
@@ -202,8 +198,7 @@ void merge(int array[], int const left, int const mid,
 	// Copy the remaining elements of
 	// right[], if there are any
 	while (indexOfSubArrayTwo < subArrayTwo) {
-		array[indexOfMergedArray]
-			= rightArray[indexOfSubArrayTwo];
+		array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
 		indexOfSubArrayTwo++;
 		indexOfMergedArray++;
 	}
